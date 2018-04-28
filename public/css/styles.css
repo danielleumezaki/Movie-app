@@ -1,0 +1,106 @@
+/*Index and Search Page*/
+.container-fluid {
+  padding: 0%;
+  background-color: #4E4B5C; }
+  .container-fluid p {
+    color: #191919;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 2.2vh; }
+  .container-fluid header {
+    background-color: 4E4B5C;
+    border-bottom: solid 1px #BEA2C2; }
+    .container-fluid header .col-12 {
+      width: 100%;
+      padding: 20px 0%; }
+    .container-fluid header h1 {
+      text-align: center;
+      width: 100%;
+      color: #A37871;
+      font-family: "Monoton", cursive;
+      word-spacing: 5px; }
+  .container-fluid article form {
+    padding: 3vh 0;
+    display: block;
+    float: right;
+    margin-right: 45vw; }
+    .container-fluid article form input {
+      margin: 3vh auto; }
+    .container-fluid article form button {
+      margin: 3vh auto; }
+  .container-fluid main .row {
+    width: 60%;
+    margin: 5vh auto 0 auto;
+    background-color: #BEA2C2;
+    box-shadow: inset 0 0 10px #000000; }
+  .container-fluid main .col-6 {
+    padding: 0%; }
+  .container-fluid main a {
+    margin: auto;
+    float: right;
+    width: 100%;
+    text-align: center;
+    padding: 7vh 0 0 0;
+    font-size: 3vh;
+    color: #4381C1; }
+  .container-fluid main a:hover {
+    color: #7f7f7f;
+    text-decoration: none; }
+  .container-fluid main #firstCol {
+    width: 100%; }
+    .container-fluid main #firstCol img {
+      width: 15vw;
+      margin: 4vh 4vw 7vh 0;
+      display: block;
+      float: right; }
+  .container-fluid main #secondCol {
+    width: 70%;
+    float: left;
+    margin-top: 4vh; }
+    .container-fluid main #secondCol p {
+      text-align: justify; }
+
+/*Movie Page*/
+.container-fluid1 {
+  padding: 0%;
+  background-color: #4E4B5C; }
+  .container-fluid1 p {
+    color: #191919;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 2.2vh; }
+  .container-fluid1 header {
+    background-color: 4E4B5C;
+    border-bottom: solid 1px #BEA2C2; }
+    .container-fluid1 header .col-12 {
+      width: 100%;
+      padding: 20px 0%; }
+    .container-fluid1 header h1 {
+      text-align: center;
+      width: 100%;
+      color: #A37871;
+      font-family: "Monoton", cursive;
+      word-spacing: 5px; }
+  .container-fluid1 main #moviePage {
+    width: 70%;
+    margin: 5vh auto 0 auto;
+    background-color: #BEA2C2;
+    box-shadow: inset 0 0 10px #000000; }
+    .container-fluid1 main #moviePage h2 {
+      font-size: 4vh;
+      text-align: center;
+      padding: 6vh 0; }
+    .container-fluid1 main #moviePage img {
+      width: 25vw;
+      margin: 4vh 2vw 7vh 0;
+      display: block;
+      float: right; }
+    .container-fluid1 main #moviePage .contentDisplay {
+      margin: 4vh 2vw 7vh 0;
+      text-align: justify;
+      width: 80%; }
+      .container-fluid1 main #moviePage .contentDisplay p {
+        font-size: 2.2vh; }
+    .container-fluid1 main #moviePage a {
+      display: block;
+      margin: 3vh auto;
+      font-size: 3vh;
+      color: #4381C1; }

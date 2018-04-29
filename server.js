@@ -30,7 +30,7 @@ request(options, (error, response, body) => {
     console.log('write something');
 });
 
-/* Creating JSON file*/
+/* Getting info from JSON file*/
 let jsonContent;
 function setMovie () {
     
@@ -47,7 +47,7 @@ function setMovie () {
 }
 setMovie ()
 
-/* Getting data from Json*/
+/* Stablishing endpoints*/
 app.get('/', (req, res) => {
     res.render('pages/index', {
         movies: jsonContent
@@ -76,15 +76,6 @@ app.get("/search", (req, res, next) => {
           });
     })
 
-    
-// app.get('/search', function(req, res) {
-//     let searchName = req.query.searchTerm.toLowerCase()
-//     console.log(searchName)
-//     res.render( 'pages/search', {
-//         movies: jsonContent,
-//         searchName
-//     });
-//  });
 
 /*Port*/
 

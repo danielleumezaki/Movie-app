@@ -1,0 +1,31 @@
+<% include ../partials/headerMovie %>
+            <main>
+            <div id="moviePage">
+            <% let moviesFilter2 = movies.results %>
+            <% for(let i = 0; i < moviesFilter2.length; i++) { %>
+            <% if (movieId  == moviesFilter2[i].id) { %>
+            <div class="row">
+                <div class="col-12">
+                    <h2> <%= moviesFilter2[i].original_title %> </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+            <img src="https://image.tmdb.org/t/p/w500/<%=moviesFilter2[i].poster_path%>" alt="">
+                </div>
+                <div class="col-6">
+                    <div class="contentDisplay">
+                    <p> <strong>Overview: </strong><%=moviesFilter2[i].overview %> </p>
+                    <p> <strong>Release Date: </strong><%= moviesFilter2[i].release_date%> </p>
+                    <p> <strong>Vote Average: </strong><%= moviesFilter2[i].vote_average %> </p>
+                    <% } %>
+                    <% } %>
+                    </div>
+                </div>
+            <br>
+            <a href="/"><<</a>
+            </div>
+            </div>
+            </main>
+         </body>
+      </html>

@@ -13,7 +13,7 @@ app.set('view engine', 'ejs');
 /*Getting IPI*/
 
 let options = { method: 'GET',
-  url: 'https://api.themoviedb.org/3/movie/top_rated?page=1&language=en-US&api_key=9acd257183931f2a1400fb3f205de85a',
+  url: 'https://api.themoviedb.org/3/movie/popular?page=1&language=en-US&api_key=9acd257183931f2a1400fb3f205de85a',
   body: '{}' };
 
 request(options, (error, response, body) => {
@@ -49,7 +49,7 @@ setMovie ()
 
 /* Getting data from Json*/
 app.get('/', (req, res) => {
-    res.render('index', {
+    res.render('pages/index', {
         movies: jsonContent
     });   
 })
@@ -57,20 +57,34 @@ app.get('/', (req, res) => {
 app.get('/movie/:id', (req, res) => {
     let movieId = req.params.id
     console.log(req.params.id)
-    res.render('movie', {
+    res.render('pages/movie', {
         movies: jsonContent,
         movieId
     });   
 });
 
-app.get('/search', function(req, res) {
-    let searchName = req.query.searchTerm.toLowerCase()
-    console.log(searchName)
-    res.render( 'search', {
-        movies: jsonContent,
-        searchName
-    });
- });
+app.get("/search", (req, res, next) => {
+    let searchName = req.query.searchTerm;
+    
+	let resultsFilter = jsonContent.results;
+        const moviesResult = resultsFilter.filter(movie => {
+            return movie.original_title.toLowerCase().includes(searchName.toLowerCase());
+            console.log(movies);
+          });
+          res.render("pages/search", {
+            movies: moviesResult,
+          });
+    })
+
+    
+// app.get('/search', function(req, res) {
+//     let searchName = req.query.searchTerm.toLowerCase()
+//     console.log(searchName)
+//     res.render( 'pages/search', {
+//         movies: jsonContent,
+//         searchName
+//     });
+//  });
 
 /*Port*/
 

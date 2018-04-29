@@ -1,0 +1,40 @@
+<% include ../partials/header %>
+            <main class = "search">   
+            <div id="moviePage1">  
+            <% if(movies.length === 0) { %>
+                    <div class="row">
+                    <div class="col-12">
+                    <h2>Sorry, movie was not found! Please, try again!</h2>
+                    <a href="/"><<</a>
+                    </div>
+                    </div>
+                    </div>
+               <% } else { %>
+               <div id="moviePage2">
+               <a href="/"><<</a>
+               <% movies.forEach(movie => { %>
+               <div class="row">
+                <div class="col-12">
+                <a href="/movie/<%= movie.id %>"><%= movie.original_title %> </a>
+                </div>
+                <div class="col-6">
+                <div id="firstCol">
+            <img src="https://image.tmdb.org/t/p/w500/<%=movie.poster_path%>" alt="">
+                </div>
+                </div>
+                <div class="col-6">
+                <div id="secondCol">
+                        <p> <strong>Overview: </strong><%= movie.overview %> </p>
+                        <p> <strong>Release Date: </strong><%= movie.release_date%> </p>
+                    <p> <strong>Vote Average: </strong><%= movie.vote_average %> </p>
+                    </div>
+                </div>
+            <br>
+
+            </div>
+            <% }) %>
+                <% } %>
+                </div>
+            </main>
+         </body>
+      </html>

@@ -1,0 +1,27 @@
+<% include ../partials/header %>
+            <main>
+            <% let moviesFilter = movies.results %>
+               <% for(let i = 0; i < moviesFilter.length; i++) { %>
+               <div class="row">
+               <div class="col-12">
+               <a href="/movie/<%= moviesFilter[i].id %>" target="_blank"> <%= moviesFilter[i].original_title %> </a>
+               </div>
+                  <div class="col-6">
+                     <div id="firstCol">
+                     
+                        <img src="https://image.tmdb.org/t/p/w500/<%=moviesFilter[i].poster_path%>" alt="blabla">
+                        <br>
+                     </div>
+                  </div>
+                  <div class="col-6">
+                     <div id="secondCol">
+                        <p> <strong>Overview: </strong><%=moviesFilter[i].overview %> </p>
+                     </div>
+                  </div>
+               </div>
+               <% }; %>
+            </main>
+         </div>
+      </div>
+   </body>
+</html>
